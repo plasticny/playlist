@@ -21,3 +21,17 @@ pnpm-debug.log*
 *.njsproj
 *.sln
 *.sw?
+
+# Electron-builder output
+/dist_electron
+
+db.sqlite
+sqlite3.exe
+public/audio
+
+# python
+public/python/__pycache__
+public/python/build
+public/python/dist
+public/python/ffmpeg.exe
+public/python/yt-dlp.exe

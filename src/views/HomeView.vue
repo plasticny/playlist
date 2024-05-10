@@ -1,18 +1,26 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
+    <PlayList />
+    <MusicPlayer />
   </div>
 </template>
 
-<script lang="ts">
-import { defineComponent } from 'vue'
-import HelloWorld from '@/components/HelloWorld.vue' // @ is an alias to /src
-
-export default defineComponent({
-  name: 'HomeView',
-  components: {
-    HelloWorld
-  }
-})
+<script setup lang="ts">
+import PlayList from '@/components/PlayList.vue'
+import MusicPlayer from '@/components/MusicPlayer.vue'
 </script>
+
+<style lang="scss">
+.home {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  #playlist {
+    height: calc(100% - 85px);
+  }
+  #musicPlayer {
+    height: 85px;
+  }
+}
+</style>
